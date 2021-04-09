@@ -6,6 +6,7 @@ function App() {
   const [test, setTest] = React.useState({}); 
 
   React.useEffect(() => {
+    // eslint-disable-next-line quotes
     fetch("http://localhost:9000/testAPI")
     .then(res => res.text())
     .then(res => setTest({ apiResponse: res }));
